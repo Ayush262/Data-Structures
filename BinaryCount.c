@@ -49,9 +49,9 @@ void countone(tree *rt, int *nm)                    //Counting nodes with one ch
     if(rt==NULL)
         return;
     countone(rt->left, nm);
-    if(rt->left!=NULL || rt->right==NULL)
+    if(rt->left!=NULL && rt->right==NULL)
         (*nm)++;
-    if(rt->left==NULL || rt->right!=NULL)
+    if(rt->left==NULL && rt->right!=NULL)
         (*nm)++;
     countone(rt->right, nm);
 }
