@@ -22,7 +22,7 @@ void show(int a[])
 
 int main(){
     int a[max];
-    int i,j,key;
+    int i;
     printf("Enter the elements in the array=");
     for(i=0;i<max;i++){
         scanf("%d",&a[i]);
