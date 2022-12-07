@@ -17,8 +17,9 @@ void sort(int a[])
 void show(int a[])
 {
     for(int i=0;i<max;i++)
-        printf("%d ",a[i]); 
+        printf("%d\n",a[i]); 
 }
+
 int main(){
     int a[max];
     int i,j,key;
