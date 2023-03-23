@@ -1,13 +1,13 @@
 #include <stdio.h>
 #define max 5
 
-void merge(int arr[], int lb, int m, int ub)
+void merge(int arr[], int l, int m, int r)
 {
 	int i, j, k;
-	int n1 = m - lb + 1;
-	int n2 = ub - m;
+	int n1 = m - l + 1;
+	int n2 = r - m;
 
-	int temp1[n1], temp2[n2];    //create temp arrays
+	int L[n1], R[n2];    //create temp arrays
 
 	for (i = 0; i < n1; i++)     // Copy data to temp arrays
 		L[i] = arr[l + i];
@@ -17,7 +17,7 @@ void merge(int arr[], int lb, int m, int ub)
 	// Adding Elements back to the array 
 	i = 0; // Initial index of first subarray
 	j = 0; // Initial index of second subarray
-	k = lb; // Initial index of merged subarray
+	k = l; // Initial index of merged subarray
 	while (i < n1 && j < n2) {
 		if (L[i] <= R[j]) {
 			arr[k] = L[i];
